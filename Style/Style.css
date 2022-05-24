@@ -1,0 +1,1030 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 12;
+}
+
+body {
+    background-color: black;
+}
+
+#HeadDesclaimers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    /* flex-direction: column; */
+}
+
+#HeadNotice {
+    display: flex;
+    justify-content: center;
+    color: red;
+    width: 450px;
+    height: auto;
+    padding: 0.5rem;
+    font: caption;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 0rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: rgba(3, 3, 3, 0.663);
+}
+
+#MainHeadNote {
+    width: 300px;
+    height: auto;
+    margin-left: 0.7rem;
+}
+
+#AllTheContenthere {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+body::before {
+    position: fixed;
+    content: "";
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Files/Background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Main Win  */
+
+ :root {
+    --MainWinWidth: 355px;
+}
+
+#MainWin {
+    display: flex;
+    width: var(--MainWinWidth);
+    /* height: 607px; */
+    height: 632px;
+    /* margin: 2rem auto; */
+    margin-right: 5rem;
+    margin-top: 2rem;
+    flex-direction: column;
+    background: url(../Files/ChatBack.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+}
+
+#MainWin::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.6;
+}
+
+
+/* Navbar of main Win Customization */
+
+#NavBarOfScreen {
+    width: 100%;
+    height: 25px;
+    background-color: #0c4e45;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#WifiSignal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Files/Wifi.png);
+    background-position: center;
+    background-size: cover;
+    width: 1rem;
+    height: 12px;
+    transform: translateY(-0.5px);
+    filter: invert();
+}
+
+#Battery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Files/Battery.png);
+    background-size: cover;
+    background-position: center;
+    width: 1rem;
+    filter: invert();
+    height: 14px;
+    transform: translateY(-1px);
+}
+
+#SIM1 {
+    width: 1rem;
+    height: 15px;
+    display: flex;
+    transform: translateY(-1px);
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Files/Sim1.png);
+    background-position: center;
+    background-size: cover;
+    margin-right: 0.2rem;
+    filter: invert();
+}
+
+#SIM2 {
+    width: 1rem;
+    height: 15px;
+    transform: translateY(-1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Files/signals.png);
+    background-position: center;
+    background-size: cover;
+    margin-right: 0.2rem;
+    filter: invert();
+}
+
+#TimeInNav {
+    font: caption;
+    font-size: 0.95rem;
+    color: white;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.3rem;
+    margin-left: 0.2rem;
+    text-transform: uppercase;
+}
+
+
+/* Main Win Elements  */
+
+#ProfileImgNav {
+    width: 100%;
+    height: 70px;
+    background-color: hsl(166deg 61% 31%);
+    display: flex;
+    align-items: center;
+}
+
+#BackSwtCont {
+    width: 25px;
+    height: 25px;
+    background-image: url(../Files/Arrow_Back.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#ProfileNNameCont {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-left: 5px;
+}
+
+#ProfileNNameCont>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    margin-left: 5px;
+}
+
+#ProfileTexts {
+    width: 200px;
+    padding-left: 14px;
+    padding-bottom: 0.3rem;
+}
+
+#ProfileName {
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    letter-spacing: .3px;
+}
+
+#Lastseen {
+    color: white;
+    font: caption;
+    font-weight: 300;
+    font-size: 13px;
+    width: 100%;
+    margin-bottom: 0rem;
+    transform: translateY(2px);
+}
+
+#AddCallCont {
+    width: 25px;
+    height: 25px;
+    background-image: url(../Files/AddCall.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+}
+
+#MoreOptionCont {
+    width: 30px;
+    height: 30px;
+    background-image: url(../Files/MoreBtn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* Main Message Win */
+
+#MainMessgeWin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(213, 93, 237, 0);
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    color: white;
+    padding: 0.1rem 0rem;
+    overflow: hidden;
+}
+
+#MainMessgeWin:hover {
+    overflow-y: scroll;
+}
+
+#MainMsgsWin {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+
+/* Client 1 Side Message */
+
+.MessagesFromClient1 {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    background-color: #231628;
+    padding: 10px 10px;
+    margin-left: auto;
+    font: caption;
+    margin-right: 1.2rem;
+    border-radius: 10px;
+    max-width: 70%;
+    font-size: 1rem;
+    word-wrap: break-word;
+    float: right;
+}
+
+.TriangleCap {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #231628;
+    position: absolute;
+    right: -10px;
+    top: 0rem;
+    z-index: 9;
+    transform: rotate(180deg);
+}
+
+.MessageinnerText {
+    color: white;
+    font: caption;
+    font-size: 0.6rem;
+    width: auto;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.MetaData {
+    display: block;
+    padding: 0 0 0 7px;
+    position: relative;
+    bottom: -4px;
+    float: right;
+    width: auto;
+}
+
+.MessageTime {
+    color: rgba(255, 255, 255, 0.692);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.ReadInfo {
+    display: inline-block;
+    margin-left: 2px;
+    position: relative;
+    top: 4px;
+    height: 16px;
+    width: 16px;
+}
+
+
+/* Client 2 Side Message */
+
+.MessagesFromClient2 {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    background-color: #151716;
+    padding: 10px 10px;
+    font: caption;
+    margin-left: 1rem;
+    border-radius: 10px;
+    max-width: 70%;
+    font-size: 1rem;
+    word-wrap: break-word;
+    float: right;
+    margin-right: auto;
+}
+
+.TriangleCap2 {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #151716;
+    position: absolute;
+    left: -10px;
+    top: 0rem;
+    z-index: 9;
+    transform: rotate(180deg);
+}
+
+.MessageinnerText2 {
+    color: white;
+    font: caption;
+    font-size: 0.6rem;
+    width: auto;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.MetaData2 {
+    display: block;
+    padding: 0 0 0 7px;
+    position: relative;
+    bottom: -4px;
+    float: right;
+    width: auto;
+}
+
+.MessageTime2 {
+    color: rgba(255, 255, 255, 0.692);
+    font-size: 0.8rem;
+    display: inline-block;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+
+/* Message Type Win  */
+
+#MessageTypeWin {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    margin-bottom: 0.4rem;
+}
+
+#MessageTyoHerInWA {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    width: 80%;
+    height: 10%;
+    border-radius: 40rem;
+    margin-left: 6px;
+    padding: 25px 0rem;
+    overflow: hidden;
+}
+
+#EmojiContnr {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-left: 10px;
+}
+
+#MainMessgeInWa {
+    width: 140px;
+    font: caption;
+    font-size: 1rem;
+    outline: none;
+    break-inside: -4;
+    border: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    height: auto;
+    transition: 0.3s;
+}
+
+#SendOptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    margin-left: 0rem;
+    transition-timing-function: linear;
+}
+
+#Attachment {
+    width: 25px;
+    border-radius: 100%;
+    height: 25px;
+    transform: rotate(225deg);
+}
+
+#PayOption {
+    width: 21px;
+    height: 21px;
+    background-color: #666;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#ClickPhotoBtn {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+#MicSendBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(166deg 61% 31%);
+    width: 50px;
+    border-radius: 100%;
+    height: 50px;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+
+/* User Message Selector  */
+
+#UserMsgSlctr {
+    background-color: rgba(3, 3, 3, 0.663);
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem 0rem;
+    color: red;
+    font: caption;
+    font-family: monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 0.1rem;
+    border-radius: 1rem;
+}
+
+.Users {
+    color: white;
+    font: caption;
+    font-family: monospace;
+    font-size: 1rem;
+    user-select: none;
+    cursor: pointer;
+    background-color: rgba(69, 69, 69, 0.56);
+    padding: 1rem;
+    margin: 0rem 1rem;
+    border-radius: 10px;
+}
+
+#Notice0 {
+    display: flex;
+    justify-content: center;
+    color: red;
+    width: 400px;
+    height: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font: caption;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(3, 3, 3, 0.663);
+}
+
+#CustomizationByUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+
+/* User Changes  */
+
+#UserChanges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(3, 3, 3, 0.663);
+    width: 400px;
+    height: auto;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+/* Change Profile */
+
+#ChangeProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(17, 0, 255, 0.314);
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 1rem 0rem;
+}
+
+#ChangeProfile>p {
+    color: white;
+    font: caption;
+    font-family: monospace;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#Notice1 {
+    display: flex;
+    justify-content: center;
+    color: red;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font: caption;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.Notes {
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+}
+
+.contentForNotice {
+    color: white;
+    font: caption;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: start;
+}
+
+#ProfileByUser {
+    background-color: transparent;
+    width: 90%;
+    color: white;
+}
+
+#ProfileByUser::-webkit-file-upload-button {
+    background-color: rgb(255, 246, 246);
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+
+/* Change User Name  */
+
+#ChangeUsername {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#UserNameIn {
+    color: rgb(255, 255, 255);
+    font: caption;
+    font-family: monospace;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid rgb(181, 181, 255);
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+#ChangeUsername>button {
+    background-color: rgb(69, 69, 69);
+    height: 3rem;
+    width: 4rem;
+    color: white;
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0rem;
+    border: none;
+    outline: none;
+}
+
+
+/* Session  */
+
+#Session {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(3, 3, 3, 0.663);
+    width: 400px;
+    height: auto;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    flex-direction: column;
+    overflow: hidden;
+    color: red;
+    font: caption;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+#isOnline {
+    color: white;
+    font: caption;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-right: auto;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+#isOnline>button {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 0.2rem 0.4rem;
+    font: caption;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    transition-timing-function: linear;
+}
+
+#LastSeenEnterByUser {
+    margin: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+#LastSeenEnterByUser::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    background-color: #777;
+    width: 200%;
+    height: 2px;
+}
+
+#LastSeenEnterByUser>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#LastSeenEnterByUser>button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font: caption;
+    font-family: monospace;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid rgb(4, 192, 255);
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+}
+
+.TimeInForLast {
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    outline: none;
+    border: 1px solid rgb(255, 0, 0);
+    margin: 0.8rem 0.5rem;
+    font: caption;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+#AddSpecificLastSeen {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+#AddSpecificLastSeen>input {
+    background-color: transparent;
+    border: 1px solid rgb(58, 255, 4);
+    margin-top: 1rem;
+    outline: none;
+    font: caption;
+    font-size: 1rem;
+    color: white;
+    padding: 0.4rem 0.6rem;
+}
+
+#AddSpecificLastSeen>button {
+    border: 1px solid red;
+    outline: none;
+    padding: 0.4rem 0.6rem;
+    font: caption;
+    font-size: 1rem;
+    background-color: transparent;
+    margin-left: 0.6rem;
+    color: white;
+    cursor: pointer;
+}
+
+#Notice2 {
+    display: flex;
+    justify-content: center;
+    color: red;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font: caption;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+/* Message Timing */
+
+#MsgTiming {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(3, 3, 3, 0.663);
+    width: 400px;
+    height: auto;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    flex-direction: column;
+    overflow: hidden;
+    color: red;
+    font: caption;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+#liveTim {
+    color: white;
+    font: caption;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-right: auto;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+#SetMsgTime {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+#SetMsgTime::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    background-color: #777;
+    width: 200%;
+    height: 2px;
+}
+
+#SetMsgTime>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#liveTim>button {
+    background-color: greenyellow;
+    color: rgb(0, 0, 0);
+    padding: 0.2rem 0.4rem;
+    font: caption;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    transition-timing-function: linear;
+}
+
+#SetMsgTime>button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font: caption;
+    font-family: monospace;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid rgb(125, 4, 255);
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+}
+
+#AutomaticRunTime {
+    color: white;
+    font: caption;
+    font-size: 1.1rem;
+    letter-spacing: 1.2px;
+    margin-right: auto;
+    margin-left: 0rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+    width: 100%;
+    border-top: 1px solid wheat;
+}
+
+#AutomaticRunTime>button {
+    background-color: greenyellow;
+    color: rgb(0, 0, 0);
+    padding: 0.2rem 0.4rem;
+    font: caption;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: 0.2s;
+    transition-timing-function: linear;
+}
+
+
+/* Nav Bar Time Set By User  */
+
+#NavBarTimeSet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(3, 3, 3, 0.663);
+    width: 400px;
+    height: auto;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    flex-direction: column;
+    overflow: hidden;
+    color: red;
+    font: caption;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+#SetTimeInNavBTN {
+    color: white;
+    font: caption;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-right: auto;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+#SetTimeInNavBTN>button {
+    background-color: greenyellow;
+    color: rgb(0, 0, 0);
+    padding: 0.2rem 0.4rem;
+    font: caption;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: 0.2s;
+    transition-timing-function: linear;
+}
+
+#NavBarTimeSet>button {
+    border: 1px solid red;
+    outline: none;
+    padding: 0.4rem 0.6rem;
+    font: caption;
+    font-size: 1rem;
+    background-color: transparent;
+    margin-left: 0.6rem;
+    color: rgb(150, 255, 59);
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+#NavBarTimeSet div+div {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Media Querries */
+
+@media only screen and (max-width: 900px) {
+    #AllTheContenthere {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    #MainWin {
+        margin: 2rem auto;
+    }
+    #CustomizationByUser {
+        margin: 0rem;
+    }
+    #HeadDesclaimers {
+        flex-direction: column;
+    }
+    #HeadNotice {
+        margin: auto;
+        margin-top: 1rem;
+    }
+}
