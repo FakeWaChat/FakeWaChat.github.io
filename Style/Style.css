@@ -48,7 +48,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width: 30rem;
+    width: 100%;
     height: auto;
 }
 
@@ -1012,7 +1012,11 @@ body::before {
     #AllTheContenthere {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30rem;
     }
     #MainWin {
         margin: 2rem auto;
@@ -1022,6 +1026,8 @@ body::before {
     }
     #HeadDesclaimers {
         flex-direction: column;
+        padding: 1rem;
+        margin: auto;
     }
     #HeadNotice {
         margin: auto;
