@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Fake WhatsApp Chat</title>
-</head>
+</head> 
 
 <body>
     <div id="MainBackgroun"></div>
@@ -36,9 +36,9 @@
             <!-- Profile Show Nav  -->
             <div id="ProfileImgNav">
                 <div id="BackSwtCont"></div>
-                <div id="ProfileNNameCont"><img src="Files/Background.jpg" alt=""></div>
+                <div id="ProfileNNameCont"><img src="/Files/Background.jpg" alt=""></div>
                 <div id="ProfileTexts">
-                    <p id="ProfileName">Unknown</p>
+                    <p id="ProfileName">Abhinit voda</p>
                     <p id="Lastseen">Last seen today at 8:30 AM</p>
                 </div>
                 <div id="AddCallCont"></div>
@@ -46,7 +46,16 @@
             </div>
             <!-- Message Window -->
             <div id="MainMessgeWin">
-                <div id="MainMsgsWin"></div>
+                <div id="MainMsgsWin"><div id="MsgSent${Idi2++}" class="MessagesFromClient1">
+                    <div class="TriangleCap"></div>
+                    asdasd
+                    <div id="DeleteSel2">X</div>
+                    <span class="MetaData">
+                        <div class="MessageTime"></div>
+                        <div class="ReadInfo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"></path></svg>
+                        </div>
+                    </span>
+                    </div></div>
             </div>
             <div id="MessageTypeWin">
                 <div id="MessageTyoHerInWA">
@@ -70,6 +79,14 @@
             </div>
         </div>
         <div id="CustomizationByUser">
+            <!-- Chat Editing Options  -->
+            <div id="EdtItms">
+                Edit Options
+                <div>
+                    <button id="dlt">Delete Chats</button>
+                </div>
+                <p>More Functions will be added soon</p>
+            </div>
             <div id="Notice0">
                 <p class="Notes">Note:</p>
                 <p class="contentForNotice">If you have PC. Press "Ctrl" + "q" to rapidly switch users, and start composing messages. Then press "Enter".</p>
@@ -142,6 +159,6 @@
         </div>
     </div>
 </body>
-<script src="Script/Script.js"></script>
+<script src="script/Script.js"></script>
 
 </html>

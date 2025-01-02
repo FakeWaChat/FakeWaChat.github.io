@@ -4,7 +4,7 @@
     box-sizing: border-box;
     position: relative;
     z-index: 12;
-} 
+}
 
 body {
     background-color: black;
@@ -67,7 +67,7 @@ body::before {
 
 /* Main Win  */
 
- :root {
+:root {
     --MainWinWidth: 355px;
 }
 
@@ -306,6 +306,7 @@ body::before {
     font-size: 1rem;
     word-wrap: break-word;
     float: right;
+    user-select: none;
 }
 
 .TriangleCap {
@@ -370,6 +371,7 @@ body::before {
     word-wrap: break-word;
     float: right;
     margin-right: auto;
+    user-select: none;
 }
 
 .TriangleCap2 {
@@ -381,6 +383,7 @@ body::before {
     top: 0rem;
     z-index: 9;
     transform: rotate(180deg);
+    user-select: none;
 }
 
 .MessageinnerText2 {
@@ -534,6 +537,77 @@ body::before {
     border-radius: 10px;
 }
 
+#EdtItms {
+    display: flex;
+    align-items: center;
+    color: red;
+    width: 400px;
+    height: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font: caption;
+    font-size: 1.1rem;
+    font-weight: bold;
+    flex-direction: column;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(3, 3, 3, 0.663);
+}
+
+#EdtItms>div {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    margin-top: 0.5rem;
+}
+
+#dlt {
+    background-color: yellow;
+    font-weight: 600;
+    border-radius: 100px;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+}
+#dlt:hover{
+    background-color: rgb(255, 255, 135);
+}
+#EdtItms>p{
+    color: rgb(255, 187, 0);
+    font: caption;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: auto;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+#DeleteSel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 100%;
+    position: absolute;
+    margin: auto;
+}
+#DeleteSel2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 100%;
+    position: absolute;
+    margin: auto;
+    top: -10%;
+    right: -10%;
+}
 #Notice0 {
     display: flex;
     justify-content: center;
