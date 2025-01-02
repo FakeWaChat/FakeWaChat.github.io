@@ -37,41 +37,11 @@ body {
     margin-left: 1rem;
     background-color: rgba(3, 3, 3, 0.663);
 }
-#HeadNotice2 {
-    display: flex;
-    justify-content: center;
-    color: red;
-    width: 450px;
-    height: auto;
-    font: caption;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-bottom: 0rem;
-    margin-top: 1rem;
-    flex-direction: column;
-    margin-left: 1rem;
-    background-color: rgba(3, 3, 3, 0.663);
-}
-
-#HeadNotice2>ul{
-    list-style-position: inside;
-}
 
 #MainHeadNote {
     width: 300px;
     height: auto;
     margin-left: 0.7rem;
-}
-#MainHeadNote2 {
-    width: 300px;
-    height: auto;
-    margin-left: 0.7rem;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
 }
 
 #AllTheContenthere {
@@ -87,7 +57,7 @@ body::before {
     content: "";
     top: 0;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     background-image: url(../Files/Background.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -97,7 +67,7 @@ body::before {
 
 /* Main Win  */
 
- :root {
+:root {
     --MainWinWidth: 355px;
 }
 
@@ -105,30 +75,27 @@ body::before {
     display: flex;
     width: var(--MainWinWidth);
     /* height: 607px; */
-    height: 710px;
+    height: 632px;
     /* margin: 2rem auto; */
     margin-right: 5rem;
     margin-top: 2rem;
     flex-direction: column;
-    background: url(../Files/ChatBack.png);
+    background: url(../Files/ChatBack.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
-    position: relative;
-    z-index: 13;
 }
 
-/* #MainWin::before {
+#MainWin::before {
     content: "";
-    position: absolute; 
+    position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: hsl(173.33deg 36% 4.9%);
-    z-index: 1;
-    opacity: 1;
-} */
+    background-color: rgb(0, 0, 0);
+    opacity: 0.6;
+}
 
 
 /* Navbar of main Win Customization */
@@ -136,8 +103,7 @@ body::before {
 #NavBarOfScreen {
     width: 100%;
     height: 25px;
-    /* background-color: #0c4e45; */
-    background-color: #0b0f15;
+    background-color: #0c4e45;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -218,8 +184,7 @@ body::before {
 #ProfileImgNav {
     width: 100%;
     height: 70px;
-    /* background-color: hsl(166deg 61% 31%); */
-    background-color: #0b0f15;
+    background-color: hsl(166deg 61% 31%);
     display: flex;
     align-items: center;
 }
@@ -232,7 +197,6 @@ body::before {
     background-position: center;
     background-size: cover;
     margin-left: 10px;
-    filter: invert();
 }
 
 #ProfileNNameCont {
@@ -257,7 +221,7 @@ body::before {
 
 #ProfileName {
     color: white;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     white-space: nowrap;
@@ -268,7 +232,7 @@ body::before {
     color: white;
     font: caption;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 13px;
     width: 100%;
     margin-bottom: 0rem;
     transform: translateY(2px);
@@ -282,7 +246,6 @@ body::before {
     background-position: center;
     background-size: cover;
     margin-left: auto;
-    filter: invert();
 }
 
 #MoreOptionCont {
@@ -294,7 +257,6 @@ body::before {
     background-size: cover;
     margin-left: 10px;
     margin-right: 10px;
-    filter: invert();
 }
 
 
@@ -334,23 +296,23 @@ body::before {
     margin-top: 10px;
     width: auto;
     height: auto;
-    /* background-color: #231628; */
-    background-color: #134d37;
+    background-color: #231628;
     padding: 10px 10px;
     margin-left: auto;
     font: caption;
     margin-right: 1.2rem;
     border-radius: 10px;
     max-width: 70%;
-    font-size: 15px;
+    font-size: 1rem;
     word-wrap: break-word;
     float: right;
+    user-select: none;
 }
 
 .TriangleCap {
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 12px solid #134d37;
+    border-bottom: 12px solid #231628;
     position: absolute;
     right: -10px;
     top: 0rem;
@@ -377,8 +339,8 @@ body::before {
 }
 
 .MessageTime {
-    color: #719d8c;
-    font-size: 12px;
+    color: rgba(255, 255, 255, 0.692);
+    font-size: 0.8rem;
     text-transform: uppercase;
     display: inline-block;
 }
@@ -399,27 +361,29 @@ body::before {
     margin-top: 10px;
     width: auto;
     height: auto;
-    background-color: #1f272a;
+    background-color: #151716;
     padding: 10px 10px;
     font: caption;
     margin-left: 1rem;
     border-radius: 10px;
     max-width: 70%;
-    font-size: 15px;
+    font-size: 1rem;
     word-wrap: break-word;
     float: right;
     margin-right: auto;
+    user-select: none;
 }
 
 .TriangleCap2 {
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 12px solid #1f272a;
+    border-bottom: 12px solid #151716;
     position: absolute;
     left: -10px;
     top: 0rem;
     z-index: 9;
     transform: rotate(180deg);
+    user-select: none;
 }
 
 .MessageinnerText2 {
@@ -441,8 +405,8 @@ body::before {
 }
 
 .MessageTime2 {
-    color: #8e9699;
-    font-size: 12px;
+    color: rgba(255, 255, 255, 0.692);
+    font-size: 0.8rem;
     display: inline-block;
     padding-left: 10px;
     text-transform: uppercase;
@@ -481,7 +445,7 @@ body::before {
 #MainMessgeInWa {
     width: 140px;
     font: caption;
-    font-size: 1.1rem;
+    font-size: 1rem;
     outline: none;
     break-inside: -4;
     border: none;
@@ -505,19 +469,18 @@ body::before {
     width: 25px;
     border-radius: 100%;
     height: 25px;
-    transform: rotate(270deg);
+    transform: rotate(225deg);
 }
 
 #PayOption {
     width: 21px;
     height: 21px;
-    /* background-color: #666; */
+    background-color: #666;
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 10px;
-    border: 2px solid #8e959a;
 }
 
 #ClickPhotoBtn {
@@ -530,8 +493,7 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: hsl(166deg 61% 31%); */
-    background-color: #21c063;
+    background-color: hsl(166deg 61% 31%);
     width: 50px;
     border-radius: 100%;
     height: 50px;
@@ -575,6 +537,77 @@ body::before {
     border-radius: 10px;
 }
 
+#EdtItms {
+    display: flex;
+    align-items: center;
+    color: red;
+    width: 400px;
+    height: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font: caption;
+    font-size: 1.1rem;
+    font-weight: bold;
+    flex-direction: column;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(3, 3, 3, 0.663);
+}
+
+#EdtItms>div {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    margin-top: 0.5rem;
+}
+
+#dlt {
+    background-color: yellow;
+    font-weight: 600;
+    border-radius: 100px;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+}
+#dlt:hover{
+    background-color: rgb(255, 255, 135);
+}
+#EdtItms>p{
+    color: rgb(255, 187, 0);
+    font: caption;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: auto;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+#DeleteSel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 100%;
+    position: absolute;
+    margin: auto;
+}
+#DeleteSel2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 100%;
+    position: absolute;
+    margin: auto;
+    top: -10%;
+    right: -10%;
+}
 #Notice0 {
     display: flex;
     justify-content: center;
@@ -591,7 +624,6 @@ body::before {
     border-radius: 1rem;
     margin-bottom: 1rem;
     background-color: rgba(3, 3, 3, 0.663);
-    margin-top: 2rem;
 }
 
 #CustomizationByUser {
@@ -669,15 +701,6 @@ body::before {
     font-weight: 300;
     font-size: 1rem;
     text-align: start;
-}
-.contentForNoticeJusDis {
-    color: white;
-    font: caption;
-    font-weight: 300;
-    font-size: 1rem;
-    text-align: start;
-    text-align: justify;
-    padding: 0 1rem;
 }
 
 #ProfileByUser {
