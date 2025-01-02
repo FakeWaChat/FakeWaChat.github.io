@@ -2,57 +2,36 @@
 //Function for send message
 function MessageSendFunc(TimeRight) {
     if (UserSwtNum != 0) {
-        ChatHtml = `<div id="MsgRecieved${Idi1++}" class="MessagesFromClient2">
+        ChatHtml += `<div id="MsgRecieved${Idi1++}" class="MessagesFromClient2">
         <div class="TriangleCap2"></div>
         ${MainMessgeInWa.value}
-        <div id="DeleteSel"></div>
         <span class="MetaData2">
-        <div class="MessageTime2">${TimeRight}</div>
+            <div class="MessageTime2">${TimeRight}</div>
+            
         </span>
-        </div>`;
-        ShowChat()
+    </div>`;
+        MainMsgsWin.innerHTML = ChatHtml;
+        MainMessgeInWa.value = "";
     } else if (UserSwtNum != 1) {
-        ChatHtml = `<div id="MsgSent${Idi2++}" class="MessagesFromClient1">
+        ChatHtml += `<div id="MsgSent${Idi2++}" class="MessagesFromClient1">
         <div class="TriangleCap"></div>
         ${MainMessgeInWa.value}
-        <div id="DeleteSel2"></div>
         <span class="MetaData">
             <div class="MessageTime">${TimeRight}</div>
             <div class="ReadInfo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"></path></svg>
             </div>
         </span>
-        </div>`;
-        ShowChat();
+    </div>`;
+        MainMsgsWin.innerHTML = ChatHtml;
         SendOptions.style.marginLeft = "0rem";
         MainMessgeInWa.style.width = "140px";
         MicSendBtn.innerHTML = MicSVG;
+        MainMessgeInWa.value = "";
         MainMessgeInWa.focus();
     }
     if (AutoNavTime) {
         TimeInNav.textContent = TimeRight;
     }
-    //When user hold on an item to delete it.
-    Array.from(MessagesFromClient1).forEach(function(ele, ind){
-    MessagesFromClient1[ind].addEventListener("mouseup",function(){
-        console.log("Holding")
-    })
-    })
-    Array.from(MessagesFromClient2).forEach(function(ele, ind){
-    MessagesFromClient2[ind].addEventListener("mousedown",function(){
-        console.log("Holding")
-    })
-    })
-}
-
-//Showing Added Chat 
-function ShowChat(){
-    HTMLChats.push(ChatHtml);
-    HTMLChat1 = "";
-    for (let i = 0; i < HTMLChats.length; i++) {
-        HTMLChat1 += HTMLChats[i];
-    }
-    MainMsgsWin.innerHTML = HTMLChat1;
-    MainMessgeInWa.value = "";
 }
 //Changing User Name Function
 function UserNameChange() {
@@ -107,8 +86,6 @@ let MainWin = document.getElementById("MainWin");
 let MicSendBtn = document.getElementById("MicSendBtn");
 let MainMsgsWin = document.getElementById("MainMsgsWin");
 let ToBeDisabled = document.getElementsByClassName("ToBeDisabled");
-let MessagesFromClient1 = document.getElementsByClassName("MessagesFromClient1");
-let MessagesFromClient2 = document.getElementsByClassName("MessagesFromClient2");
 let TimeFuncEl = document.getElementsByClassName("TimeFuncEl");
 let Users = document.getElementsByClassName("Users");
 let LastSeenEnterByUser = document.getElementById("LastSeenEnterByUser");
@@ -116,7 +93,6 @@ let AddSpecificLastSeen = document.getElementById("AddSpecificLastSeen");
 let NavBarTimeSet = document.getElementById("NavBarTimeSet");
 let UserlastseenNote = document.getElementById("UserlastseenNote");
 let EnterTimeOfLastSeen = document.getElementById("EnterTimeOfLastSeen");
-
 //Declared Variable By Selecting Childrens/Parent.
 let OnlineOnOffBTN = isOnline.children[0];
 
@@ -128,8 +104,6 @@ let Idi2 = 0;
 let TodayLiveTime = true;
 let ProfileByUserImages = "";
 let AutoNavTime = true;
-let HTMLChats =[];
-let HTMLChat1 = [];
 
 //Other Type Variables
 let SendSVG = `<svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 24 24" width="25px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>`
@@ -290,21 +264,18 @@ SetTimeInNavBTN.children[0].addEventListener("click", () => {
         SetTimeInNavBTN.children[0].textContent = "No";
         SetTimeInNavBTN.children[0].style.backgroundColor = "Red";
         SetTimeInNavBTN.children[0].style.color = "White";
-        NavBarTimeSet.children[1].style.display = "flex";
-        NavBarTimeSet.children[2].style.display = "flex";
+        NavBarTimeSet.children[1].style.display = "flex"
+        NavBarTimeSet.children[2].style.display = "flex"
         AutoNavTime = false;
     } else {
         SetTimeInNavBTN.children[0].textContent = "Yes"
         SetTimeInNavBTN.children[0].style.backgroundColor = "greenyellow";
         SetTimeInNavBTN.children[0].style.color = "black";
-        NavBarTimeSet.children[1].style.display = "none";
-        NavBarTimeSet.children[2].style.display = "none";
+        NavBarTimeSet.children[1].style.display = "none"
+        NavBarTimeSet.children[2].style.display = "none"
         AutoNavTime = true;
     }
 });
-
-
-
 //Update time in nav bar
 NavBarTimeSet.children[2].addEventListener("click", () => {
     TimeInNav.textContent = `${NavTimeInByUser1.value}:${NavTimeInByUser2.value} ${NavTimeInByUser3.value}`;
