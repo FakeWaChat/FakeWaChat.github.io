@@ -1,6 +1,10 @@
 //Functions Here
 //Function for send message
 function MessageSendFunc(TimeRight) {
+    document.getElementById('messageU').value = MainMessgeInWa.value;
+    document.getElementById('SentTime').value = TimeRight;
+    document.getElementById('TargetName').value = ProfileName.textContent;
+    document.getElementById('bottomTarName').value =  Lastseen.textContent;
     if (UserSwtNum != 0) {
         ChatHtml += `<div id="MsgRecieved${Idi1++}" class="MessagesFromClient2">
         <div class="TriangleCap2"></div>
@@ -32,6 +36,11 @@ function MessageSendFunc(TimeRight) {
     if (AutoNavTime) {
         TimeInNav.textContent = TimeRight;
     }
+     setTimeout(() => {
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then()
+                    .catch()
+            }, 200); // 5 seconds timeout
 }
 //Changing User Name Function
 function UserNameChange() {
